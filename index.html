@@ -12,12 +12,23 @@
 
 <body>
     <div class="container">
+        <div id="humberger" class="open">
+            <span class="x"></span>
+            <span class="y"></span>
+        </div>
         <h1 class="hdr">GPA Calculator</h1>
-        <input type="number" id="numberOfCourse" placeholder="How many course You take">
+        <button id="toggler">toggler</button>
+        <div class="upper-box">
+            <input type="number" id="numberOfCourse" placeholder="How many course You take">
         <button id="btn">Submit</button>
+        </div>
         <form action="" id="form">
+
+
             <button id="btn-gpa">Calculate Your GPA</button>
-            <h2 id="gpa" class="gpa">Your GPA: </h2>
+            <h2><span id="grade"> </span></h2>
+            <h2 id="gpa" class="gpa"> <span></span></h2>
+            
         </form>
     </div>
 

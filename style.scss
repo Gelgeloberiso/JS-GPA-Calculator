@@ -1,12 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
+    color: #fff;
 }
-.container{
+
+.container {
     display: flex;
     height: 100dvh;
     background: #434252;
@@ -14,54 +17,135 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-h2{
+
+.hdr {
+    display: none;
+    transition: 3s;
+}
+
+.open {
+    position: relative;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+    span {
+        position: absolute;
+        width: 90px;
+        height: 10px;
+        background: rgb(0, 0, 0);
+
+    }
+
+    .x {
+        transform: translateY(25px);
+    }
+
+    .y {
+        transform: translateY(-25x);
+    }
+
+
+   
+}
+ .close{
+        position: relative;
+        background: #fff;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            position: absolute;
+            width: 90px;
+            height: 10px;
+            background: rgb(255, 0, 0);
+
+        }
+
+        .x {
+            transform: rotate(45deg);
+        }
+
+        .y {
+            transform: rotate(-45deg);
+        }
+    }
+h2 {
     color: #000000;
 }
+
+.upper-box {
+    display: flex;
+    flex-direction: column;
+}
+
 button,
-input[type=submit]{
+input[type=submit] {
     height: 2rem;
     width: 15rem;
     border-radius: .5rem;
     font-weight: 600;
 }
-input{
+
+input {
     height: 2rem;
     width: 13rem;
     border-radius: .4rem;
     padding-left: 2rem;
 }
-label{
+
+label {
     color: #000000;
 }
-form{
-    display: flex;
+
+form {
+    display: none;
     flex-direction: column;
     width: 23rem;
     height: 15rem;
     overflow-y: scroll;
     overflow-x: hidden;
-    
+
     align-items: center;
     justify-content: sp;
     background: #fff;
-    font-size: 20px ;
+    font-size: 20px;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: -10px 10px 10px #000;
-  
+
 }
-.input-container{
+
+.input-container {
     width: 100%;
     margin: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-    input{
+
+    input {
         height: 2rem;
         width: 15rem;
         margin: 3px 0 3px 0;
         border-radius: 0;
     }
+}
+
+#gpa {
+    display: none;
+}
+@media screen and (min-width: 375px){
+//if i set this to max-width the humberger menu became invisible is screen is lethan 375px
+    #humberger{
+        display: none;
+    }
+    
 }

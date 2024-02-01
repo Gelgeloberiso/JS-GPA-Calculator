@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 .container {
@@ -26,8 +27,91 @@ body {
           flex-direction: column;
 }
 
+.hdr {
+  display: none;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.open {
+  position: relative;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+
+.open span {
+  position: absolute;
+  width: 90px;
+  height: 10px;
+  background: black;
+}
+
+.open .x {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+}
+
+.open .y {
+  -webkit-transform: translateY(-25x);
+          transform: translateY(-25x);
+}
+
+.close {
+  position: relative;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.close span {
+  position: absolute;
+  width: 90px;
+  height: 10px;
+  background: red;
+}
+
+.close .x {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close .y {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 h2 {
   color: #000000;
+}
+
+.upper-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 button,
@@ -50,9 +134,7 @@ label {
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -98,5 +180,15 @@ form {
   width: 15rem;
   margin: 3px 0 3px 0;
   border-radius: 0;
+}
+
+#gpa {
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  #humberger {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
